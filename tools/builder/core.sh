@@ -185,9 +185,10 @@ DISTS=$DISTS'
     pixman          https://xorg.freedesktop.org/releases/individual/lib/pixman-0.38.4.tar.bz2                  lib/libpixman-1.a
     cairo           https://cairographics.org/releases/cairo-1.16.0.tar.xz                                      lib/libcairo.a
     pango           http://ftp.gnome.org/pub/gnome/sources/pango/1.44/pango-1.44.1.tar.xz                       lib/libpango-1.0.a
-    gtk2            http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-2.24.32.tar.xz                        lib/gtk-quartz-2.0.a
+    gtk2            http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-2.24.32.tar.xz                        lib/gtk-quartz-2.0.dylib
 '
 
+# for now we don't build ffmpeg because game recording is broken
 BUILD_FFMPEG=
 PROJECT_ARGS="$PROJECT_ARGS -DENABLE_FFMPEG=NO"
 
@@ -337,22 +338,13 @@ DIST_ARGS="$DIST_ARGS
     bakefile    --enable-shared
     XML-Parser  EXPATINCPATH=\"\$BUILD_ROOT/root/include\" EXPATLIBPATH=\"\$BUILD_ROOT/root/lib\"
     doxygen     -DICONV_ACCEPTS_NONCONST_INPUT:BOOL=FALSE -DICONV_ACCEPTS_CONST_INPUT:BOOL=TRUE
-    sfml        -DSFML_USE_SYSTEM_DEPS=TRUE
     libcroco    --disable-Bsymbolic
     freetype    --with-harfbuzz=no
     harfbuzz    --with-cairo=no --with-icu=no
-    flac        --disable-ogg
     libvpx      --disable-unit-tests --disable-tools --disable-docs --disable-examples
     libxavs     --disable-asm
     libzvbi     --without-x
     libxml2     --without-python
-    libbluray   --disable-bdjava-jar --disable-examples
-    libopencore-amrnb   --disable-compile-c
-    vidstab     -DUSE_OMP=NO
-    libx264     --enable-pic
-    libx265     -DHIGH_BIT_DEPTH=ON -DENABLE_ASSEMBLY=OFF -DENABLE_CLI=OFF
-
-    ffmpeg      --pkg-config-flags=--static --enable-nonfree --extra-version=tessus --enable-avisynth --enable-fontconfig --enable-gpl --enable-version3 --enable-libass --enable-libbluray --enable-libfreetype --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopus --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libx264 --enable-libx265 --enable-libxavs --enable-libxvid --enable-libzmq --enable-libzvbi --enable-openssl --enable-lzma --extra-cflags='-DMODPLUG_STATIC -DZMQ_STATIC' --extra-cxxflags='-DMODPLUG_STATIC -DZMQ_STATIC' --extra-objcflags='-DMODPLUG_STATIC -DZMQ_STATIC'
 
 #
 # TODO: add these if possible (from brew) --enable-indev=qtkit --enable-securetransport --enable-chromaprint --enable-ffplay --enable-frei0r --enable-libbs2b --enable-libcaca --enable-libfdk-aac --enable-libgme --enable-libgsm --enable-librtmp --enable-librubberband --enable-libssh --enable-libtesseract --enable-libtwolame --enable-webp --enable-libzimg

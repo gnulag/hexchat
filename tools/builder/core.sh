@@ -190,7 +190,7 @@ DISTS=$DISTS'
 
 # for now we don't build ffmpeg because game recording is broken
 BUILD_FFMPEG=
-PROJECT_ARGS="$PROJECT_ARGS -DENABLE_FFMPEG=NO"
+PROJECT_ARGS="$PROJECT_ARGS"
 
 : ${PATH_SEP:=':'}
 

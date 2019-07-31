@@ -4,7 +4,7 @@ set -e
 
 [ -n "$BASH_VERSION" ] && set -o posix
 
-export BUILD_ROOT="${BUILD_ROOT:-$HOME/vbam-build}"
+export BUILD_ROOT="${BUILD_ROOT:-$HOME/hexchat-build}"
 export TAR="${TAR:-tar --force-local}"
 export CURL="${CURL:-curl --insecure}"
 export PERL_MAKE="${PERL_MAKE:-make}"
@@ -187,9 +187,6 @@ DISTS=$DISTS'
     pango           http://ftp.gnome.org/pub/gnome/sources/pango/1.44/pango-1.44.1.tar.xz                       lib/libpango-1.0.a
     gtk2            http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-2.24.32.tar.xz                        lib/gtk-quartz-2.0.dylib
 '
-
-# for now we don't build ffmpeg because game recording is broken
-BUILD_FFMPEG=
 PROJECT_ARGS="$PROJECT_ARGS"
 
 : ${PATH_SEP:=':'}
@@ -2542,7 +2539,7 @@ find_checkout() {
     (
         cd "$(dirname "$0")"
         while [ "$PWD" != / ]; do
-            if [ -f src/version.h.in ]; then
+            if [ -f meson.build ]; then
                 puts "$PWD"
                 exit 0
             fi

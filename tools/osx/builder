@@ -27,7 +27,7 @@ case "$1" in
         ;;
 esac
 
-export BUILD_ROOT="$HOME/vbam-build-mac-${target_bits}bit"
+export BUILD_ROOT="$HOME/hexchat-build-mac-${target_bits}bit"
 
 BUILD_ENV=$(cat <<EOF
 export MACOSX_DEPLOYMENT_TARGET=10.7

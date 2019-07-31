@@ -175,49 +175,21 @@ DISTS=$DISTS'
     libgpg-error    https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.36.tar.bz2                     lib/libgpg-error.a
     libgcrypt       https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.2.tar.bz2                          lib/libgcrypt.a
     libsecret       http://ftp.gnome.org/pub/gnome/sources/libsecret/0.18/libsecret-0.18.5.tar.xz               lib/libsecret-1.a
-    sdl2            https://www.libsdl.org/release/SDL2-2.0.9.tar.gz                                            lib/libSDL2.a
-    flac            https://github.com/xiph/flac/archive/f7cd466c24fb5d1966943f3ea36a1f4a37858597.tar.gz        lib/libFLAC.a
     libogg          http://downloads.xiph.org/releases/ogg/libogg-1.3.2.tar.xz                                  lib/libogg.a
     libvorbis       https://github.com/xiph/vorbis/archive/v1.3.5.tar.gz                                        lib/libvorbis.a
     harfbuzz        https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-1.7.5.tar.bz2                lib/libharfbuzz.a
-    sfml            https://github.com/SFML/SFML/archive/013d053277c980946bc7761a2a088f1cbb788f8c.tar.gz        lib/libsfml-system-s.a
     shared-mime-info http://freedesktop.org/~hadess/shared-mime-info-1.9.tar.xz                                 bin/update-mime-database
-    wxwidgets       https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2     lib/libwx_baseu-3.1*.a
     graphite2       https://github.com/silnrsi/graphite/releases/download/1.3.10/graphite2-1.3.10.tgz           lib/libgraphite2.a
-    xvidcore        http://downloads.xvid.org/downloads/xvidcore-1.3.4.tar.bz2                                  lib/libxvidcore.a
     fribidi         https://github.com/fribidi/fribidi/releases/download/v1.0.1/fribidi-1.0.1.tar.bz2           lib/libfribidi.a
-    libgsm          http://www.quut.com/gsm/gsm-1.0.17.tar.gz                                                   lib/libgsm.a
-    libmodplug      https://github.com/Konstanty/libmodplug/archive/5a39f5913d07ba3e61d8d5afdba00b70165da81d.tar.gz lib/libmodplug.a
-    libopencore-amrnb https://downloads.sourceforge.net/project/opencore-amr/opencore-amr/opencore-amr-0.1.5.tar.gz lib/libopencore-amrnb.a
-    opus            https://archive.mozilla.org/pub/opus/opus-1.2.1.tar.gz                                      lib/libopus.a
-    snappy          https://github.com/google/snappy/archive/1.1.7.tar.gz                                       lib/libsnappy.a
-    libsoxr         https://downloads.sourceforge.net/project/soxr/soxr-0.1.2-Source.tar.xz                     lib/libsoxr.a
-    speex           http://downloads.us.xiph.org/releases/speex/speex-1.2.0.tar.gz                              lib/libspeex.a
-    libtheora       https://github.com/Distrotech/libtheora/archive/17b02c8c564475bb812e540b551219fc42b1f75f.tar.gz lib/libtheora.a
-    vidstab         https://github.com/georgmartius/vid.stab/archive/v1.1.0.tar.gz                              lib/libvidstab.a
-    libvo-amrwbenc  https://github.com/mstorsjo/vo-amrwbenc/archive/v0.1.3.tar.gz                               lib/libvo-amrwbenc.a
-    mp3lame         https://downloads.sourceforge.net/project/lame/lame/3.100/lame-3.100.tar.gz                 lib/libmp3lame.a
-    libass          https://github.com/libass/libass/releases/download/0.13.7/libass-0.13.7.tar.xz              lib/libass.a
-    libbluray       ftp://ftp.videolan.org/pub/videolan/libbluray/1.0.2/libbluray-1.0.2.tar.bz2                 lib/libbluray.a
-    libvpx          http://storage.googleapis.com/downloads.webmproject.org/releases/webm/libvpx-1.6.1.tar.bz2  lib/libvpx.a
-    libwavpack      http://www.wavpack.com/wavpack-5.1.0.tar.bz2                                                lib/libwavpack.a
-    libx264         ftp://ftp.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20171228-2245.tar.bz2      lib/libx264.a
-    libx265         https://bitbucket.org/multicoreware/x265/downloads/x265_2.5.tar.gz                          lib/libx265.a
-    libxavs         https://github.com/Distrotech/xavs/archive/distrotech-xavs-git.tar.gz                       lib/libxavs.a
-    libzmq          https://github.com/zeromq/libzmq/releases/download/v4.2.2/zeromq-4.2.2.tar.gz               lib/libzmq.a
-    libzvbi         https://downloads.sourceforge.net/project/zapping/zvbi/0.2.35/zvbi-0.2.35.tar.bz2           lib/libzvbi.a
-    ffmpeg          https://github.com/ffmpeg/ffmpeg/archive/0c78b6a416c661afed745d44495b5194f714fb96.tar.gz    lib/libavformat.a
+    atk             http://ftp.gnome.org/pub/gnome/sources/atk/2.32/atk-2.32.0.tar.xz                           lib/libatk-1.0.a
+    pixman          https://xorg.freedesktop.org/releases/individual/lib/pixman-0.38.4.tar.bz2                  lib/libpixman-1.a
+    cairo           https://cairographics.org/releases/cairo-1.16.0.tar.xz                                      lib/libcairo.a
+    pango           http://ftp.gnome.org/pub/gnome/sources/pango/1.44/pango-1.44.1.tar.xz                       lib/libpango-1.0.a
+    gtk2            http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-2.24.32.tar.xz                        lib/gtk-quartz-2.0.a
 '
 
-# for now we don't build ffmpeg because game recording is broken
 BUILD_FFMPEG=
 PROJECT_ARGS="$PROJECT_ARGS -DENABLE_FFMPEG=NO"
-
-FFMPEG_DISTS='
-    graphite2 xvidcore fribidi libgsm libmodplug libopencore-amrnb opus snappy
-    libsoxr speex libtheora vidstab libvo-amrwbenc mp3lame libass libbluray
-    libvpx libwavpack libx264 libx265 libxavs libzmq libzvbi ffmpeg
-'
 
 : ${PATH_SEP:=':'}
 
@@ -289,16 +261,6 @@ DIST_PRE_BUILD="$DIST_PRE_BUILD
     graphviz        sed -i.bak 's/ -export-symbols/ -Wl,-export-symbols/g' \$(find . -name Makefile.am); \
                     putsln '#define __declspec(x)' > declspec.h;
     harfbuzz        touch test/CMakeLists.txt;
-    xvidcore        cd build/generic; \
-                    sed -i.bak '/^all:/{ s/ *\\\$(SHARED_LIB)//; }; \
-                                /^install:/{ s, *\\\$(BUILD_DIR)/\\\$(SHARED_LIB),,; }; \
-                                s/\\\$(INSTALL).*\\\$(SHARED_LIB).*/:/; \
-                                s/\\\$(LN_S).*\\\$(SHARED_LIB).*/:/; \
-                                s/@echo.*\\\$(SHARED_LIB).*/@:/; \
-                    ' Makefile;
-    libx265         cd source;
-    libsoxr         rm -rf tests; mkdir tests; touch tests/CMakeLists.txt;
-    libvorbis       rm -f autogen.sh;
     XML-SAX         sed -i.bak 's/-MXML::SAX/-Mblib -MXML::SAX/' Makefile.PL;
     docbook2x       sed -i.bak 's/^\\( *SUBDIRS *= *.*\\)doc\\(.*\\)\$/\1\2/'           Makefile.am; \
                     sed -i.bak 's/^\\( *SUBDIRS *= *.*\\)documentation\\(.*\\)\$/\1\2/' xslt/Makefile.am;

@@ -169,7 +169,7 @@ DISTS=$DISTS'
     XML-Parser      https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.44.tar.gz                      perl5/man/man3/XML*Parser.3*
     intltool        https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz                bin/intltoolize
     ninja           https://github.com/ninja-build/ninja/archive/v1.8.2.tar.gz                                  bin/ninja
-    meson           https://github.com/mesonbuild/meson/releases/download/0.44.0/meson-0.44.0.tar.gz            bin/meson
+    meson           https://github.com/mesonbuild/meson/releases/download/0.51.1/meson-0.51.1.tar.gz            bin/meson
     glib            https://github.com/GNOME/glib/archive/2.58.1.tar.gz                                         lib/libglib-2.0.a
     libgpg-error    https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.36.tar.bz2                     lib/libgpg-error.a
     libgcrypt       https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.2.tar.bz2                          lib/libgcrypt.a

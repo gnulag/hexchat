@@ -211,6 +211,7 @@ DIST_PATCHES=$DIST_PATCHES'
     python3         https://gist.githubusercontent.com/rkitover/93d89a679705875c59275fb0a8f22b45/raw/6149e7fa3920d6c674c79448c5a4c9313620e06c/python-3.6.3-custom-static-openssl.patch https://gist.githubusercontent.com/rkitover/b18f19eafda3775a9652cc9cdf3ec914/raw/ed14c34bf9f205ccc3a4684dbdb83f8620162b98/python-3.6.3-static-libintl.patch
     intltool        https://gist.githubusercontent.com/rkitover/d638882f52e5d5f8e392cbf6842cd6d0/raw/dcfbe358bbb8b89f88b40a9c3402494552fd33f8/intltool-0.51.0.patch
     libgpg-error    https://raw.githubusercontent.com/gentoo/gentoo/master/dev-libs/libgpg-error/files/libgpg-error-1.36-gawk5-support.patch
+    atk             https://gist.githubusercontent.com/ZachBacon/e3e3610c0f0031490594a13718a1841d/raw/f012ab689b1947bf6333ff29db3ed56d0b67fa24/disable-tests-atk.patch
 '
 
 DIST_TAR_ARGS="$DIST_TAR_ARGS
@@ -376,7 +377,7 @@ DIST_EXTRA_LDFLAGS="$DIST_EXTRA_LDFLAGS
     glib        -liconv
     graphviz    -lpcreposix
     doxygen     -lintl -liconv
-    ffmpeg      -lm -llzma -lpthread
+    atk         -lintl -liconv -lffi -lgio-2.0 -lgmodule-2.0 -lgobject-2.0 -lglib-2.0 -lpcre
 "
 
 DIST_EXTRA_LIBS="$DIST_EXTRA_LIBS
@@ -384,7 +385,6 @@ DIST_EXTRA_LIBS="$DIST_EXTRA_LIBS
     shared-mime-info    \$LD_START_GROUP -lxml2 -lgio-2.0 -lgmodule-2.0 -lgobject-2.0 -lglib-2.0 -lpcre -llzma -lz -lm -lffi -lpthread -liconv -lresolv -ldl \$LD_END_GROUP
     python3             -lintl
     harfbuzz            -lz
-    wxwidgets           -ljpeg -ltiff
 "
 
 OIFS=$IFS

@@ -212,6 +212,7 @@ DIST_PATCHES=$DIST_PATCHES'
     intltool        https://gist.githubusercontent.com/rkitover/d638882f52e5d5f8e392cbf6842cd6d0/raw/dcfbe358bbb8b89f88b40a9c3402494552fd33f8/intltool-0.51.0.patch
     libgpg-error    https://raw.githubusercontent.com/gentoo/gentoo/master/dev-libs/libgpg-error/files/libgpg-error-1.36-gawk5-support.patch
     atk             https://gist.githubusercontent.com/ZachBacon/e3e3610c0f0031490594a13718a1841d/raw/f012ab689b1947bf6333ff29db3ed56d0b67fa24/disable-tests-atk.patch
+    pixman          https://gist.githubusercontent.com/ZachBacon/fb026bc0264168328c7102a89bc3411d/raw/853c0cf75cd6ac8d428576353eaa6874984e95d4/disable-test-pixman.patch
 '
 
 DIST_TAR_ARGS="$DIST_TAR_ARGS

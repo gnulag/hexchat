@@ -170,18 +170,18 @@ DISTS=$DISTS'
     intltool        https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz                bin/intltoolize
     ninja           https://github.com/ninja-build/ninja/archive/v1.8.2.tar.gz                                  bin/ninja
     meson           https://github.com/mesonbuild/meson/releases/download/0.51.1/meson-0.51.1.tar.gz            bin/meson
-    glib            https://github.com/GNOME/glib/archive/2.58.1.tar.gz                                         lib/libglib-2.0.a
+    glib            https://ftp.gnome.org/pub/gnome/sources/glib/2.60/glib-2.60.6.tar.xz                                         lib/libglib-2.0.a
     libgpg-error    https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.36.tar.bz2                     lib/libgpg-error.a
     libgcrypt       https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.2.tar.bz2                          lib/libgcrypt.a
     libsecret       http://ftp.gnome.org/pub/gnome/sources/libsecret/0.18/libsecret-0.18.5.tar.xz               lib/libsecret-1.a
     libogg          http://downloads.xiph.org/releases/ogg/libogg-1.3.2.tar.xz                                  lib/libogg.a
     libvorbis       https://github.com/xiph/vorbis/archive/v1.3.5.tar.gz                                        lib/libvorbis.a
-    harfbuzz        https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-1.7.5.tar.bz2                lib/libharfbuzz.a
+    harfbuzz        https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-2.5.3.tar.xz                 lib/libharfbuzz.a
     shared-mime-info http://freedesktop.org/~hadess/shared-mime-info-1.9.tar.xz                                 bin/update-mime-database
     graphite2       https://github.com/silnrsi/graphite/releases/download/1.3.10/graphite2-1.3.10.tgz           lib/libgraphite2.a
     fribidi         https://github.com/fribidi/fribidi/releases/download/v1.0.1/fribidi-1.0.1.tar.bz2           lib/libfribidi.a
     atk             http://ftp.gnome.org/pub/gnome/sources/atk/2.32/atk-2.32.0.tar.xz                           lib/libatk-1.0.a
-    pixman          https://xorg.freedesktop.org/releases/individual/lib/pixman-0.38.4.tar.bz2                  lib/libpixman-1.a
+    pixman          https://xorg.freedesktop.org/releases/individual/lib/pixman-0.38.4.tar.bz2                  lib/libpixman-1.dylib
     cairo           https://cairographics.org/releases/cairo-1.16.0.tar.xz                                      lib/libcairo.a
     pango           http://ftp.gnome.org/pub/gnome/sources/pango/1.44/pango-1.44.1.tar.xz                       lib/libpango-1.0.a
     gtk2            http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-2.24.32.tar.xz                        lib/gtk-quartz-2.0.dylib
@@ -211,8 +211,9 @@ DIST_PATCHES=$DIST_PATCHES'
     python3         https://gist.githubusercontent.com/rkitover/93d89a679705875c59275fb0a8f22b45/raw/6149e7fa3920d6c674c79448c5a4c9313620e06c/python-3.6.3-custom-static-openssl.patch https://gist.githubusercontent.com/rkitover/b18f19eafda3775a9652cc9cdf3ec914/raw/ed14c34bf9f205ccc3a4684dbdb83f8620162b98/python-3.6.3-static-libintl.patch
     intltool        https://gist.githubusercontent.com/rkitover/d638882f52e5d5f8e392cbf6842cd6d0/raw/dcfbe358bbb8b89f88b40a9c3402494552fd33f8/intltool-0.51.0.patch
     libgpg-error    https://raw.githubusercontent.com/gentoo/gentoo/master/dev-libs/libgpg-error/files/libgpg-error-1.36-gawk5-support.patch
-    atk             https://gist.githubusercontent.com/ZachBacon/e3e3610c0f0031490594a13718a1841d/raw/f012ab689b1947bf6333ff29db3ed56d0b67fa24/disable-tests-atk.patch
+    atk             https://gist.githubusercontent.com/ZachBacon/6c8616a70608b44e1a4bd30c5913e861/raw/f1229d0403d5067d784db4c2caf10f70acc161be/atk.patch
     pixman          https://gist.githubusercontent.com/ZachBacon/fb026bc0264168328c7102a89bc3411d/raw/853c0cf75cd6ac8d428576353eaa6874984e95d4/disable-test-pixman.patch
+    pango           https://gist.githubusercontent.com/ZachBacon/8fb0e9dcc7036ffb4d90e69e79f77922/raw/2c12a37009728a7248e6058a6672c58ef8c3e67b/disable-tests-and-submodules-pango.patch
 '
 
 DIST_TAR_ARGS="$DIST_TAR_ARGS
@@ -227,7 +228,6 @@ DIST_CONFIGURE_TYPES="$DIST_CONFIGURE_TYPES
     python2         autoreconf
     python3         autoreconf
     libxml2-python  python
-    glib            autoreconf
     graphviz        autoreconf
     docbook2x       autoreconf
     libvorbis       autoreconf
@@ -332,7 +332,6 @@ DIST_ARGS="$DIST_ARGS
     graphviz    --disable-ltdl --without-x CFLAGS=\"-include \$PWD/declspec.h \$CFLAGS\"
     python2     --with-ensurepip --with-system-expat
     python3     --with-ensurepip --with-system-expat
-    glib        --with-libiconv=gnu
     bakefile    --enable-shared
     XML-Parser  EXPATINCPATH=\"\$BUILD_ROOT/root/include\" EXPATLIBPATH=\"\$BUILD_ROOT/root/lib\"
     doxygen     -DICONV_ACCEPTS_NONCONST_INPUT:BOOL=FALSE -DICONV_ACCEPTS_CONST_INPUT:BOOL=TRUE

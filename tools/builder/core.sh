@@ -342,6 +342,7 @@ DIST_ARGS="$DIST_ARGS
     libxavs     --disable-asm
     libzvbi     --without-x
     libxml2     --without-python
+    pango       -Dcpp_args=\"\-I\$BUILD_ROOT/root/include/harfbuzz\"
 
 #
 # TODO: add these if possible (from brew) --enable-indev=qtkit --enable-securetransport --enable-chromaprint --enable-ffplay --enable-frei0r --enable-libbs2b --enable-libcaca --enable-libfdk-aac --enable-libgme --enable-libgsm --enable-librtmp --enable-librubberband --enable-libssh --enable-libtesseract --enable-libtwolame --enable-webp --enable-libzimg

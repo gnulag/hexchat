@@ -93,7 +93,7 @@ if [ "$target_cpu" = i386 ]; then
 
     table_line_append DIST_ARGS libicu '--host= --build='
 fi
-
+table_line_append DIST_EXTRA_CFLAGS pango -I$BUILD_ROOT/include/harfbuzz
 table_line_replace DIST_CONFIGURE_TYPES libmodplug autoreconf
 table_line_append  DIST_PRE_BUILD       libmodplug " \
     sed -i.bak '/-mmacosx-version-min=/d' configure.ac; \

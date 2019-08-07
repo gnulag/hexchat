@@ -213,7 +213,7 @@ DIST_PATCHES=$DIST_PATCHES'
     libgpg-error    https://raw.githubusercontent.com/gentoo/gentoo/master/dev-libs/libgpg-error/files/libgpg-error-1.36-gawk5-support.patch
     atk             https://gist.githubusercontent.com/ZachBacon/6c8616a70608b44e1a4bd30c5913e861/raw/f1229d0403d5067d784db4c2caf10f70acc161be/atk.patch
     pixman          https://gist.githubusercontent.com/ZachBacon/fb026bc0264168328c7102a89bc3411d/raw/853c0cf75cd6ac8d428576353eaa6874984e95d4/disable-test-pixman.patch
-    pango           https://gist.githubusercontent.com/ZachBacon/8fb0e9dcc7036ffb4d90e69e79f77922/raw/2c12a37009728a7248e6058a6672c58ef8c3e67b/disable-tests-and-submodules-pango.patch
+    pango           https://gist.githubusercontent.com/ZachBacon/64a3b27ec88c3817d2e63f7e7e67545e/raw/79ad4b33cd9cc78809cdc64483687169b39aff87/pango-util-tests-tools-disable.patch
 '
 
 DIST_TAR_ARGS="$DIST_TAR_ARGS

@@ -106,7 +106,7 @@ DISTS=$DISTS'
     xz              https://tukaani.org/xz/xz-5.2.3.tar.gz                                                      lib/liblzma.a
     unzip           https://downloads.sourceforge.net/project/infozip/UnZip%206.x%20%28latest%29/UnZip%206.0/unzip60.tar.gz     bin/unzip
     zlib            https://zlib.net/zlib-1.2.11.tar.gz                                                         lib/libz.a
-    ccache          https://www.samba.org/ftp/ccache/ccache-3.4.3.tar.xz                                        bin/ccache
+    ccache          https://github.com/ccache/ccache/releases/download/v3.7.2/ccache-3.7.2.tar.xz               bin/ccache
     zip             https://downloads.sourceforge.net/project/infozip/Zip%203.x%20%28latest%29/3.0/zip30.tar.gz                 bin/zip
     openssl         https://www.openssl.org/source/openssl-1.0.2p.tar.gz                                        lib/libssl.a
     cmake           https://cmake.org/files/v3.13/cmake-3.13.0-rc1.tar.gz                                       bin/cmake
@@ -181,7 +181,7 @@ DISTS=$DISTS'
     graphite2       https://github.com/silnrsi/graphite/releases/download/1.3.10/graphite2-1.3.10.tgz           lib/libgraphite2.a
     fribidi         https://github.com/fribidi/fribidi/releases/download/v1.0.1/fribidi-1.0.1.tar.bz2           lib/libfribidi.a
     atk             http://ftp.gnome.org/pub/gnome/sources/atk/2.32/atk-2.32.0.tar.xz                           lib/libatk-1.0.a
-    pixman          https://xorg.freedesktop.org/releases/individual/lib/pixman-0.38.4.tar.bz2                  lib/libpixman-1.dylib
+    pixman          https://xorg.freedesktop.org/releases/individual/lib/pixman-0.38.4.tar.bz2                  lib/libpixman-1.a
     cairo           https://cairographics.org/releases/cairo-1.16.0.tar.xz                                      lib/libcairo.a
     pango           http://ftp.gnome.org/pub/gnome/sources/pango/1.44/pango-1.44.1.tar.xz                       lib/libpango-1.0.a
     gtk2            http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-2.24.32.tar.xz                        lib/gtk-quartz-2.0.dylib
@@ -205,7 +205,6 @@ export MESON_ARGS="--prefix /usr --buildtype release --default-library static -D
 DIST_PATCHES=$DIST_PATCHES'
     m4              https://raw.githubusercontent.com/gentoo/gentoo/master/sys-devel/m4/files/m4-1.4.18-glibc228.patch
     docbook2x       https://gist.githubusercontent.com/rkitover/0b5dcc95a0703a9b0e0e7eb6d325a98e/raw/e256d2fad8d19633ac8abe02a0d1e119063d1fd9/docbook2x.patch
-    ccache          https://gist.githubusercontent.com/rkitover/4dd30c2841a2131be8715038f538d622/raw/40a8f0f50aa6ca5f9658a0c37aa17393cc80c109/ccache-3.4.2-msys.patch
     graphite2       https://gist.githubusercontent.com/rkitover/418600634d7cf19e2bf1c3708b50c042/raw/839b72d9cda545f2e3b640d743c1bd44b89861b9/graphite2-1.3.10-static.patch
     python2         https://gist.githubusercontent.com/rkitover/2d9e5baff1f1cc4f2618dee53083bd35/raw/7f33fcf5470a9f1013ac6ae7bb168368a98fe5a0/python-2.7.14-custom-static-openssl.patch https://gist.githubusercontent.com/rkitover/afab7ed3ac7ce1860c43a258571c8ae1/raw/6f5fc90a7acf5f5c3ffda2edf402b28f469a4b3b/python-2.7.14-static-libintl.patch
     python3         https://gist.githubusercontent.com/rkitover/93d89a679705875c59275fb0a8f22b45/raw/6149e7fa3920d6c674c79448c5a4c9313620e06c/python-3.6.3-custom-static-openssl.patch https://gist.githubusercontent.com/rkitover/b18f19eafda3775a9652cc9cdf3ec914/raw/ed14c34bf9f205ccc3a4684dbdb83f8620162b98/python-3.6.3-static-libintl.patch
@@ -213,7 +212,7 @@ DIST_PATCHES=$DIST_PATCHES'
     libgpg-error    https://raw.githubusercontent.com/gentoo/gentoo/master/dev-libs/libgpg-error/files/libgpg-error-1.36-gawk5-support.patch
     atk             https://gist.githubusercontent.com/ZachBacon/6c8616a70608b44e1a4bd30c5913e861/raw/f1229d0403d5067d784db4c2caf10f70acc161be/atk.patch
     pixman          https://gist.githubusercontent.com/ZachBacon/fb026bc0264168328c7102a89bc3411d/raw/853c0cf75cd6ac8d428576353eaa6874984e95d4/disable-test-pixman.patch
-    pango           https://gist.githubusercontent.com/ZachBacon/64a3b27ec88c3817d2e63f7e7e67545e/raw/79ad4b33cd9cc78809cdc64483687169b39aff87/pango-util-tests-tools-disable.patch
+    pango           https://gist.githubusercontent.com/rkitover/ac26f7322852cbb35c623b90704b205e/raw/56a8c59b7032ff617a2145e310c87bf84163db9d/pango.patch
 '
 
 DIST_TAR_ARGS="$DIST_TAR_ARGS
